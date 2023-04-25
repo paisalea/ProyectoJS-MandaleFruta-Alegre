@@ -10,7 +10,7 @@ function crearCard(producto) {
             <div class="Roles">ARS</div>
             <div class="Name">${producto.precio}</div>
             <div class="Name1">${producto.nombre}</div>
-            <button type="button" class="btn btn-outline-warning Roles1">+</button>
+            <button type="button" class="btn btn-outline-warning Roles1" id="${producto.codigo}">+</button>
             </div>
         </div>`
 }
@@ -36,15 +36,14 @@ function filtrarProductos(valor) {
 
 function accionarBotones() {
     const botones = document.querySelectorAll(".btn.btn-outline-warning.Roles1")
-          for (let boton of botones) {
-            console.log(boton.id)
-            /* boton.addEventListener("click", ()=> {
-                let resultado = productos.find(producto => producto.codigo === parseInt(boton.codigo))
-                    carrito.push(resultado)
-                    guardarCarrito() 
-            })*/
-          }
-          
+    console.log(botones)      
+    for (let boton of botones) {
+        boton.addEventListener("click", ()=> {
+            let resultado = productos.find(producto => producto.codigo === parseInt(boton.id))
+                carrito.push(resultado)
+                guardarCarrito() 
+        })
+    }
 }
 
 function guardarCarrito() {
