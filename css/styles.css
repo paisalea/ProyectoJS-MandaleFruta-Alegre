@@ -12,26 +12,28 @@ html,body{
   color:white;
   text-align: center;
   font-family: 'Chakra Petch', sans-serif;
-  overflow-x:hidden;
+/*   overflow-x:hidden;
+  overflow-y:hidden; */
   margin-top: 0px;
 }
 .imagenHeader{
   width: 100px;
-  position:fixed;
-  top: 0px;
-  left: 105px;
+  margin-left: 100px;
 }
-footer{
-  position:fixed;
-  top: 40px;
-  right: 20px;
+
+.sectionDatosPers{
+  align-items: center;
   font-weight:bolder;
 }
 
+.buscador{
+  border-radius:15px;
+
+}
 .card {
   width: 260px;
   height: 90px;
-  background: rgb(53, 52, 52);
+  background: transparent;
   border: none;
   margin-top: 5px;
 }
@@ -83,21 +85,29 @@ footer{
 .Name1 {
   width: 80px;
   height: 40px;
+  display: flex;
   float: left;
   transform: translate(5px ,0px);
   border-radius: 5px;
-  font-size: x-large;
+  font-size: 15 rem;
   font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .Roles1 {
   width: 40px;
   height: 40px;
   float: left;
+  display: flex;
+  align-items: center;
   transform: translate(5px ,0px);
   border-radius: 5px;
   font-size: 28px;
   font-weight:bolder;
+  margin-top: 6px;
+  margin-left: 3px;
 }
 
 @keyframes load89234 {
